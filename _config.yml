@@ -2,12 +2,12 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: http://mazhuang.org
+url: http://www.sunziyang.com
 date_format: "ordinal"
-title: 码志
-subtitle: "打码改变人生"
-description: "马壮的个人博客"
-keywords: 码志, Zhuang Ma, mzlogin, mazhuang
+title: 随遇而安
+subtitle: "在自由的空气中漂浮"
+description: "孙梓洋的个人博客"
+keywords: 孙梓洋, Ziyang Sun, zvonimirsun, sunziyang
 favicon: /favicon.ico
 timezone: Asia/Shanghai
 encoding: "utf-8"
@@ -17,11 +17,9 @@ side_bar_repo_limit: 5
 #      Author      #
 # ---------------- #
 author: Zhuang Ma
-organization: zkh360.com
-organization_url: http://www.zkh360.com
-github_username: mzlogin
-location: Wuhan, China
-email: chumpma@gmail.com
+github_username: zvonimirsun
+location: Sunzhou, China
+email: i@sunziyang.com
 
 # ---------------- #
 #    Navigation    #
@@ -34,10 +32,6 @@ navs:
   -
     href: /categories/
     label: 分类
-
-  -
-    href: /wiki/
-    label: 维基
 
   -
     href: /links/
@@ -73,12 +67,9 @@ gems:
     - jekyll-feed
     - jemoji
 #     - jekyll-mentions
-collections:
-    wiki:
-        output: true
-        permalink: /wiki/:path/
 
-repository: mzlogin/mzlogin.github.io
+
+repository: zvonimirsun/zvonimirsun.github.io
 
 # ---------------- #
 #      Comments    #
