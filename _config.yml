@@ -16,7 +16,7 @@ side_bar_repo_limit: 5
 # ---------------- #
 #      Author      #
 # ---------------- #
-author: Zhuang Ma
+author: Ziyang Sun
 github_username: zvonimirsun
 location: Sunzhou, China
 email: i@sunziyang.com
@@ -67,7 +67,6 @@ gems:
     - jekyll-feed
     - jemoji
 #     - jekyll-mentions
-
 
 repository: zvonimirsun/zvonimirsun.github.io
 
