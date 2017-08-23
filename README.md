@@ -4,7 +4,7 @@
 
 ## 致谢
 
-本博客Fork自 [mzlogin](http://mzlogin.github.io) ，十分感谢！
+本博客Fork自 [mzlogin](https://github.com/mzlogin/mzlogin.github.io) ，十分感谢！
 
 ## 贴心提示
 
