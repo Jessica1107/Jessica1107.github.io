@@ -2,7 +2,7 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: http://www.sunziyang.com
+url: https://www.sunziyang.com
 date_format: "ordinal"
 title: 随遇而安
 subtitle: "在自由的空气中漂浮"
