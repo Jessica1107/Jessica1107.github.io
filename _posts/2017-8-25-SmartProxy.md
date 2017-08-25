@@ -6,7 +6,7 @@ description: 安卓番羽土啬软件
 keywords: app，翻墙
 ---
 
-##SmartProxy
+## SmartProxy
 
 **GitHub地址**
 
@@ -14,15 +14,15 @@ keywords: app，翻墙
 https://github.com/hedaode/SmartProxy
 ```
 
-##下载地址
+## 下载地址
 
 原始地址：[http://smartproxy.me:80/app/SmartProxy.apk](http://smartproxy.me:80/app/SmartProxy.apk)
 
 备用链接：[http://ov827byht.bkt.clouddn.com/app/apk/smartproxy.apk](http://ov827byht.bkt.clouddn.com/app/apk/smartproxy.apk "备用链接")
 
-##官方介绍
+## 官方介绍
 
-###安卓下的智能代理
+### 安卓下的智能代理
 
 SmartProxy是一款工作在Android 4.0及以上系统的TCP透明代理客户端软件，无需ROOT权限。它根据配置文件的规则来决定使用代理还是直连。最关键的是能防DNS污染，永不掉线，还很省电。
 
@@ -42,7 +42,7 @@ SmartProxy是一款工作在Android 4.0及以上系统的TCP透明代理客户�
 
 软件使用NIO异步读写数据，无复杂运算和逻辑，仅仅在需要联网时才会消耗资源，非常适合长期后台运行。
 
-##配置说明
+## 配置说明
 
 提示：配置文件请使用**UTF-8**编码。当然如果是纯英文，用**ASCII**编码也可以。
 
@@ -50,7 +50,7 @@ SmartProxy是一款工作在Android 4.0及以上系统的TCP透明代理客户�
 
 ------------------------------------
 
-###最简配置：
+### 最简配置：
 
 ```
 #必须至少包含一行proxy信息，默认仅访问国外网站才会代理，国内直连。
