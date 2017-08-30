@@ -1,9 +1,9 @@
 ---
 layout: post
 title: MarkdownPad2.5 注册码
-categories: 破解
+categories: app
 description: Markdown编辑器
-keywords: 注册码
+keywords: 注册码,app
 ---
 
 ![MarkdownPad 2](/images/2017-8-24-MarkdownPad/markdownpad.png)
