@@ -1,7 +1,7 @@
 ---
 layout: post
 title: SmartProxy-安卓智能代理
-categories: app
+categories: App
 description: 安卓番羽土啬软件
 keywords: app，翻墙
 ---

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: MarkdownPad2.5 注册码
-categories: app
+categories: App
 description: Markdown编辑器
 keywords: 注册码,app
 ---
