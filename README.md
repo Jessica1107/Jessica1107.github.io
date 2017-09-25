@@ -6,13 +6,15 @@
 
 本博客Fork自 [mzlogin](https://github.com/mzlogin/mzlogin.github.io) ，十分感谢！
 
-## 贴心提示
+## 以下内容转自 [mzlogin](https://github.com/mzlogin/mzlogin.github.io)
+
+### 贴心提示
 
 1. 排版建议遵照一定的规范，推荐 [中文文案排版指北（简体中文版）][1]。
 
 2. 在本地预览博客效果可以参考 [Setting up your Pages site locally with Jekyll][2]。
 
-## 经验与思考
+### 经验与思考
 
 * 简约，尽量每个页面都不展示多余的内容。
 
