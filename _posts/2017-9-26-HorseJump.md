@@ -19,7 +19,7 @@ keywords: 笔记, C#
 
 ## 代码
 
-```C#
+```csharp
 using System;
 
 namespace 跳马
