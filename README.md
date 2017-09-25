@@ -2,11 +2,15 @@
 
 我的个人博客：<http://www.sunziyang.com> ，欢迎访问。
 
+---------
+
 ## 致谢
 
 本博客Fork自 [mzlogin](https://github.com/mzlogin/mzlogin.github.io) ，十分感谢！
 
 ## 以下内容转自 [mzlogin](https://github.com/mzlogin/mzlogin.github.io)
+
+---------
 
 ### 贴心提示
 
