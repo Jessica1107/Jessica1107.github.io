@@ -19,7 +19,7 @@ keywords: 笔记, C#
 
 ## 代码
 
-```C#
+```csharp
 // Program to find the maximum profit job sequence from a given array
 // of jobs with deadlines and profits
 
