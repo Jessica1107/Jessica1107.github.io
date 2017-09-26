@@ -238,5 +238,5 @@ namespace 最佳工作序列
 
 参考链接：
 
-1. [Job Sequencing Problem | Set 1 (Greedy Algorithm)](http://www.geeksforgeeks.org/job-sequencing-problem-set-1-greedy-algorithm/)
-2. [Job Sequencing Problem | Set 2 (Using Disjoint Set)](http://www.geeksforgeeks.org/job-sequencing-using-disjoint-set-union/)
+1. [Job Sequencing Problem - Set 1 (Greedy Algorithm)](http://www.geeksforgeeks.org/job-sequencing-problem-set-1-greedy-algorithm/)
+2. [Job Sequencing Problem - Set 2 (Using Disjoint Set)](http://www.geeksforgeeks.org/job-sequencing-using-disjoint-set-union/)
