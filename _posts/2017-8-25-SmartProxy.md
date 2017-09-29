@@ -6,6 +6,10 @@ description: 安卓番羽土啬软件
 keywords: app，翻墙
 ---
 
+介绍一个能在安卓手机上实现自动翻墙的app。
+
+<!-- more -->
+
 ## SmartProxy
 
 **GitHub地址**
