@@ -3,7 +3,7 @@ layout: post
 title: 最佳工作序列算法
 categories: 笔记
 description: 最佳工作序列算法练习
-keywords: 笔记, C#
+keywords: 笔记, C#，GIS算法
 ---
 
 有N件工作，输入每件工作的费时、最后完成的期限及工作的价值，试求可能的一个完成工作序列，使价值和最大。

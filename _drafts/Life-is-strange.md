@@ -11,3 +11,5 @@ keywords: Blog
 <!--more-->
 
 对于《奇异人生》这个游戏，不知道有多少人玩过。在我看来，《奇异人生》讲述了一个十分吸引人的美妙故事，
+
+![Life is strange](http://blog-1253146816.file.myqcloud.com/images/Life-is-strange/life-is-strange-cover.png)
