@@ -16,13 +16,13 @@ keywords: Blog
 
 对于**《奇异人生》**这个游戏，不知道有多少人玩过。在我看来，这绝对可以算作是神作。我很久以前就看到过这个游戏了，但是由于各种原因没能体验这个游戏，十分可惜。今年2月多，我偶然间在steam上看到这个游戏，整个游戏包括DLC在内只卖11元。不用多说，我立刻买了下来，血赚有没有！
 
-![Life is strange](http://blog-1253146816.file.myqcloud.com/images/2017-10-02-Life-is-strange/life-is-strange-cover.png)
+![Life is strange](https://blog-1253146816.file.myqcloud.com/images/2017-10-02-Life-is-strange/life-is-strange-cover.png)
 
 《奇异人生》讲述了一个名为**Max Caulfield**的高中女生的故事。在神秘失踪五年后，Max回到了自己的家乡，位于俄勒冈州Oregon的Arcadia Bay，她要寻找到当初一起失踪的好友Rachel Amber，还要探索一切的真相。而在失踪的这段时间内，她获得了一种神奇的能力：能够倒带时间。
 
 游戏的女主MAX是一个稚气未脱、面带雀斑的女孩，喜欢用相机记录世界，做事有个性，与周围总是格格不入，还总是受人欺负。游戏就是通过这样一个独特的视角来展示这个世界的。
 
-![Max](http://blog-1253146816.file.myqcloud.com/images/2017-10-02-Life-is-strange/MAX.jpg)
+![Max](https://blog-1253146816.file.myqcloud.com/images/2017-10-02-Life-is-strange/MAX.jpg)
 
 作为一个**互动电影式**的剧情类游戏，你可以帮主角做出选择，甚至在你后悔时，你可以短距离回溯时间，重新选择。你的选择会左右游戏发展的方向，你的选择决定了角色们的命运，但是你会发现即使你逆流了时间，终究改变不了事实，无法做到一切都完美，终究还是会留有遗憾。
 
@@ -32,8 +32,8 @@ keywords: Blog
 
 ## 奇异人生：风暴前夕
 
-![奇异人生：风暴前夕](http://blog-1253146816.file.myqcloud.com/images/2017-10-02-Life-is-strange/before-the-storm-cover.jpg)
+![奇异人生：风暴前夕](https://blog-1253146816.file.myqcloud.com/images/2017-10-02-Life-is-strange/before-the-storm-cover.jpg)
 
 《奇异人生：风暴前夕》是《奇异人生》前传，在9月1日正式发行。在前作如此优良的情况下，我有理由相信第二作也将会是一部神作。前传这种东西是最难过的，因为你早就知道了他们的结局。《奇异人生》的结局是一个悲剧，这一作则从另一个角色**歌露儿·普莱斯**的角度来讲述这个故事。游戏我还没有体验，体验过后再来评价。看过那些已有的评论，我相信不会让我失望的。
 
-![宣传图](http://blog-1253146816.file.myqcloud.com/images/2017-10-02-Life-is-strange/before-the-storm-poster.jpg)
+![宣传图](https://blog-1253146816.file.myqcloud.com/images/2017-10-02-Life-is-strange/before-the-storm-poster.jpg)

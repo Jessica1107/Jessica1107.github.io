@@ -22,7 +22,7 @@ https://github.com/hedaode/SmartProxy
 
 原始地址：[http://smartproxy.me:80/app/SmartProxy.apk](http://smartproxy.me:80/app/SmartProxy.apk)
 
-备用链接：[http://blog-1253146816.file.myqcloud.com/app/smartproxy.apk](http://blog-1253146816.file.myqcloud.com/app/smartproxy.apk)
+备用链接：[https://blog-1253146816.file.myqcloud.com/app/smartproxy.apk](https://blog-1253146816.file.myqcloud.com/app/smartproxy.apk)
 
 ## 官方介绍
 
