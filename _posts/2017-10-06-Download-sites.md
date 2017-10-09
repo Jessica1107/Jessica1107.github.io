@@ -21,7 +21,7 @@ keywords: Blog, ed2k, BT
 
 - [欧美剧集,耐卡影音,_耐卡影音论坛_ncarbbs - Ncar Team!](http://bbs.ncar.cc/forum-oumeijuji-1.html)
 - [80s手机电影网 - 最新MP4手机电影下载](http://www.80s.tw/)
-- [人人影视,字幕组下载站|为您翻译最新最快的海外影视剧,ZiMuZu.tv](http://www.zimuzu.tv/)
+- [人人影视,字幕组下载站 - 为您翻译最新最快的海外影视剧,ZiMuZu.tv](http://www.zimuzu.tv/)
 
 ## II. 动漫
 
@@ -33,7 +33,7 @@ keywords: Blog, ed2k, BT
 - [776动漫下载网](http://www.776dm.com/)
 - [风车动漫－专注动漫的门户网站](http://www.fengchedm.com/)
 - [大连生活网－影视娱乐下载](http://www.dlkoo.com/down/3/)
-- [动漫下载|BT|动画|漫画|片源|游戏 - 旋风动漫](http://share.xfsub.com:88/)
+- [动漫下载、BT、动画、漫画、片源、游戏 - 旋风动漫](http://share.xfsub.com:88/)
 - [动漫下载 - 天使动漫论坛 - 梦开始的地方 - Powered by Discuz!](http://www.tsdm.net/forum.php?mod=forumdisplay&fid=8)
 
 ## III. 资源
@@ -46,4 +46,4 @@ keywords: Blog, ed2k, BT
 - [Torrent Kitty - Free Torrent To Magnet Link Conversion Service](https://www.torrentkitty.tv/search/)
 - [BTSOW - Tags](https://btso.pw/tags)
 - [Ultimate Emule Search](http://emule.synthasite.com/search.php)
-- [eMule Server 2016 Reliable Secure | eMule.com](http://www.emule.com/emule-server/)
+- [eMule Server 2016 Reliable Secure - eMule.com](http://www.emule.com/emule-server/)
