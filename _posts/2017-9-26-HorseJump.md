@@ -19,6 +19,8 @@ keywords: 笔记, C#
 
 ## 代码
 
+Github库地址：[https://github.com/ZvonimirSun/HorseJump](https://github.com/ZvonimirSun/HorseJump)
+
 ```csharp
 using System;
 

@@ -19,6 +19,8 @@ keywords: 笔记, C#，GIS算法
 
 ## 代码
 
+Github库地址：[https://github.com/ZvonimirSun/JobSequenceProblem](https://github.com/ZvonimirSun/JobSequenceProblem)
+
 ```csharp
 // Program to find the maximum profit job sequence from a given array
 // of jobs with deadlines and profits
