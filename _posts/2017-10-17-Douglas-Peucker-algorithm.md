@@ -3,7 +3,7 @@ layout: post
 title: 道格拉斯—普克法
 categories: 笔记
 description: 道格拉斯—普克法压缩矢量数据
-keywords: 笔记，C#，GIS算法
+keywords: 笔记,C#,GIS算法
 ---
 
 ## 算法描述
