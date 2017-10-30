@@ -2,7 +2,7 @@
 #   Main Configs   #
 # ---------------- #
 baseurl:
-url: http://www.sunziyang.com
+url: https://www.sunziyang.com
 date_format: "ordinal"
 title: 随遇而安
 subtitle: "在自由的空气中漂浮"
@@ -71,7 +71,7 @@ repository: zvonimirsun/zvonimirsun.github.io
 #      Comments    #
 # ---------------- #
 # support provider: remarkbox, gitment, gitalk
-comments_provider: gitment
+comments_provider: gitalk
 # !!!重要!!! 请修改下面这些信息为你自己申请的
 # !!!Important!!! Please modify infos below to yours
 # https://imsun.net/posts/gitment-introduction/
