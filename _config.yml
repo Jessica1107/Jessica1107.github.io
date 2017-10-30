@@ -70,10 +70,23 @@ repository: zvonimirsun/zvonimirsun.github.io
 # ---------------- #
 #      Comments    #
 # ---------------- #
-# support provider: remarkbox
-comments:
-    provider: remarkbox
-
+# support provider: remarkbox, gitment, gitalk
+comments_provider: gitment
+# !!!重要!!! 请修改下面这些信息为你自己申请的
+# !!!Important!!! Please modify infos below to yours
+# https://imsun.net/posts/gitment-introduction/
+gitment:
+    owner: zvonimirsun
+    repo: zvonimirsun.github.io
+    oauth:
+        client_id: bdbc5c2d530ca59fd12a
+        client_secret: 845c90824be260199ec0d72b67bafd00cb8c81ac
+# https://github.com/gitalk/gitalk#install
+gitalk:
+    owner: zvonimirsun
+    repo: zvonimirsun.github.io
+    clientID: bdbc5c2d530ca59fd12a
+    clientSecret: 845c90824be260199ec0d72b67bafd00cb8c81ac
 
 # ---------------- #
 #    Analytics     #
