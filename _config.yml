@@ -74,6 +74,9 @@ repository: zvonimirsun/zvonimirsun.github.io
 comments_provider: remarkbox
 # !!!重要!!! 请修改下面这些信息为你自己申请的
 # !!!Important!!! Please modify infos below to yours
+# https://www.remarkbox.com/
+remarkbox:
+    rb_owner_key: a7ec1d2e-c233-11e7-a40d-040140774501
 # https://imsun.net/posts/gitment-introduction/
 gitment:
     owner: ZvonimirSun
