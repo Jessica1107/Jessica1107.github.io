@@ -21,4 +21,6 @@ keywords: shadowsocks，翻墙
 - Link speed: 1Gigabit
 - Location: US, California
 
-有兴趣的朋友可以联系我，联系方式在**关于**页面。
+~~有兴趣的朋友可以联系我，联系方式在**关于**页面。~~
+
+现在不自己搭ss服务器了，感觉用的时间一长，质量就不行了，还是买现成的靠谱。欸~~~
