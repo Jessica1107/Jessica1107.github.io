@@ -19,13 +19,13 @@ keywords: ShadowsocksR，翻墙
 
 ### 资费
 
-![cost](http://blog-1253146816.file.myqcloud.com/images/2017-11-21-ssr-promotion/cost.png)
+![cost](/images/2017-11-21-ssr-promotion/cost.png)
 
 讲道理，我觉得这个价格相当的诱人。根据使用情况，网速也确实很快（YouTube 1080p稳定不卡，加载速度奇快），提供的部分节点加速游戏效果也很不错（支持UDP转发，用香港节点加速吃鸡），所言不虚。需要注意的是，那个一次性60元的版本不是按时间，而是按照流量来计费的，流量没有时间限制，每个月流量使用不多的，其实可以买这个，60元100G还是很实惠的。
 
 ### 控制面板
 
-![panel](http://blog-1253146816.file.myqcloud.com/images/2017-11-21-ssr-promotion/panel.png)
+![panel](/images/2017-11-21-ssr-promotion/panel.png)
 
 在控制面板中提供了丰富的功能，也提供了详细的教程，包括不同设备上ssr的配置和通过ssr加速游戏的教程。当然不同平台的软件包也提供下载。
 

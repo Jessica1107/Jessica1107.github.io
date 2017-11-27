@@ -20,7 +20,7 @@ keywords: 笔记,C#,GIS算法
   - 若大于临界值，则离该直线距离最大的点保留
   - 否则将直线两端间各点全部舍去
 
-![Douglas-Peucker](http://blog-1253146816.file.myqcloud.com/images/2017-10-17-Douglas-Peucker-algorithm/Douglas-Peucker.png)
+![Douglas-Peucker](/images/2017-10-17-Douglas-Peucker-algorithm/Douglas-Peucker.png)
 
 ## 要求
 

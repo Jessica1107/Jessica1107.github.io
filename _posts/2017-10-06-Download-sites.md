@@ -14,7 +14,7 @@ keywords: Blog, ed2k, BT
 
 为了塞满硬盘，一起努力吧！
 
-![Download sites](http://blog-1253146816.file.myqcloud.com/images/2017-10-06-Download-sites/download.jpg)
+![Download sites](/images/2017-10-06-Download-sites/download.jpg)
 图片来自网络
 
 ## I. 电影和美剧

@@ -232,7 +232,7 @@ namespace 最佳工作序列
 
 ## 操作示意
 
-![最佳工作序列](https://blog-1253146816.file.myqcloud.com/images/2017-9-26-JobSequenceProblem/JobSequenceProblem.png)
+![最佳工作序列](/images/2017-9-26-JobSequenceProblem/JobSequenceProblem.png)
 
 **代码如果存在问题，请一定帮我指正!大神，谢谢了!**
 

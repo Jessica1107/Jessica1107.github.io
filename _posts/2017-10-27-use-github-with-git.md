@@ -43,7 +43,7 @@ git最初的开发动力来自于BitKeeper和Monotone。git最初只是作为一
 
 ## Git常用命令
 
-![Common Command](http://blog-1253146816.file.myqcloud.com/images/2017-10-27-use-github-with-git/Common%20Command.png)
+![Common Command](/images/2017-10-27-use-github-with-git/Common%20Command.png)
 
 ### 新建代码库
 
