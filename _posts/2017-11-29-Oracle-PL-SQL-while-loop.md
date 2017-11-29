@@ -48,7 +48,7 @@ insert into power values(6,1,60);
 insert into power values(6,2,34);
 ```
 
-<img src="/images/2017-11-29-Oracle-PL-SQL-while-loop/createtable.png" alt="create table" align="center" width=307">
+<img src="/images/2017-11-29-Oracle-PL-SQL-while-loop/createtable.png" alt="create table" width=307">
 
 #### 计算整月的电费
 
