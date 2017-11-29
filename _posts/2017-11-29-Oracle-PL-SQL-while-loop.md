@@ -6,6 +6,10 @@ description: Oracle数据库学习
 keywords: 笔记, Oracle, while loop, 循环, PL/SQL
 ---
 
+用while loop语句进行循环计算的一个实例。最近做题遇到，在此记录。
+
+<!-- more -->
+
 ## WHILE-LOOP语法
 
 当**条件为真**时，执行语句。
@@ -16,15 +20,15 @@ WHILE condition LOOP
 END LOOP;
 ```
 
-<!-- more -->
-
 ## 实例
 
 ### 题目
 
 给出一个Power表(表 1)的数据如下：
 
-<img src="/images/2017-11-29-Oracle-PL-SQL-while-loop/table1.png" alt="table1" align="center" width="446">
+<div align=center>
+<img src="/images/2017-11-29-Oracle-PL-SQL-while-loop/table1.png" alt="table1" width="446">
+</div>
 
 **条件:**
 
@@ -45,7 +49,9 @@ insert into power values(6,1,60);
 insert into power values(6,2,34);
 ```
 
+<div align=center>
 <img src="/images/2017-11-29-Oracle-PL-SQL-while-loop/createtable.png" alt="create table" align="center" width=307">
+</div>
 
 #### 计算整月的电费
 
@@ -75,7 +81,9 @@ end;
 /
 ```
 
-<p><img src="/images/2017-11-29-Oracle-PL-SQL-while-loop/calculate.png" alt="calculate" align="center" width="341"></p>
+<div align=center>
+<img src="/images/2017-11-29-Oracle-PL-SQL-while-loop/calculate.png" alt="calculate" align="center" width="341">
+</div>
 
 #### 显示结果
 
@@ -83,4 +91,6 @@ end;
 select * from power;
 ```
 
-<p><img src="/images/2017-11-29-Oracle-PL-SQL-while-loop/result.png" alt="result" align="center" width="254"></p>
+<div align=center>
+<img src="/images/2017-11-29-Oracle-PL-SQL-while-loop/result.png" alt="result" align="center" width="254">
+</div>
