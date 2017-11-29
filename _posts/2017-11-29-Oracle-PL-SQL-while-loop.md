@@ -48,7 +48,7 @@ insert into power values(6,1,60);
 insert into power values(6,2,34);
 ```
 
-<img src="/images/2017-11-29-Oracle-PL-SQL-while-loop/createtable.png" alt="create table" width=307">
+<img src="/images/2017-11-29-Oracle-PL-SQL-while-loop/createtable.png" alt="create table" width="307">
 
 #### 计算整月的电费
 
@@ -78,7 +78,7 @@ end;
 /
 ```
 
-<img src="/images/2017-11-29-Oracle-PL-SQL-while-loop/calculate.png" alt="calculate" align="center" width="341">
+<img src="/images/2017-11-29-Oracle-PL-SQL-while-loop/calculate.png" alt="calculate" width="341">
 
 #### 显示结果
 
@@ -86,4 +86,4 @@ end;
 select * from power;
 ```
 
-<img src="/images/2017-11-29-Oracle-PL-SQL-while-loop/result.png" alt="result" align="center" width="254">
+<img src="/images/2017-11-29-Oracle-PL-SQL-while-loop/result.png" alt="result" width="254">
