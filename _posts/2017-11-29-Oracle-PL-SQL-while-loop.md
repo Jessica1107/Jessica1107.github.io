@@ -26,7 +26,7 @@ END LOOP;
 
 给出一个Power表(表 1)的数据如下：
 
-<img src="/images/2017-11-29-Oracle-PL-SQL-while-loop/table1.png" alt="table1" width="446">
+<p><img src="/images/2017-11-29-Oracle-PL-SQL-while-loop/table1.png" alt="table1" width="446"></p>
 
 
 **条件:**
@@ -48,7 +48,7 @@ insert into power values(6,1,60);
 insert into power values(6,2,34);
 ```
 
-<img src="/images/2017-11-29-Oracle-PL-SQL-while-loop/createtable.png" alt="create table" width="307">
+<p><img src="/images/2017-11-29-Oracle-PL-SQL-while-loop/createtable.png" alt="create table" width="307"></p>
 
 #### 计算整月的电费
 
@@ -78,7 +78,7 @@ end;
 /
 ```
 
-<img src="/images/2017-11-29-Oracle-PL-SQL-while-loop/calculate.png" alt="calculate" width="341">
+<p><img src="/images/2017-11-29-Oracle-PL-SQL-while-loop/calculate.png" alt="calculate" width="341"></p>
 
 #### 显示结果
 
@@ -86,4 +86,4 @@ end;
 select * from power;
 ```
 
-<img src="/images/2017-11-29-Oracle-PL-SQL-while-loop/result.png" alt="result" width="254">
+<p><img src="/images/2017-11-29-Oracle-PL-SQL-while-loop/result.png" alt="result" width="254"></p>

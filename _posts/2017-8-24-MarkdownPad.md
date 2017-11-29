@@ -10,7 +10,7 @@ keywords: 注册码,app
 
 <!-- more -->
 
-![MarkdownPad 2](/images/2017-8-24-MarkdownPad/markdownpad.png)
+<p><img src="/images/2017-8-24-MarkdownPad/markdownpad.png" alt="MarkdownPad 2" width="500"></p>
 
 ### 邮箱
 
