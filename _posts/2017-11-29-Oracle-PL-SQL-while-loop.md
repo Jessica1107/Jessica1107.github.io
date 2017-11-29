@@ -16,13 +16,15 @@ WHILE condition LOOP
 END LOOP;
 ```
 
+<!-- more -->
+
 ## 实例
 
 ### 题目
 
 给出一个Power表(表 1)的数据如下：
 
-<p><img src="/images/2017-11-29-Oracle-PL-SQL-while-loop/table1.png" alt="table1" align="center" width="400"></p>
+<img src="/images/2017-11-29-Oracle-PL-SQL-while-loop/table1.png" alt="table1" align="center" width="446">
 
 **条件:**
 
@@ -43,7 +45,7 @@ insert into power values(6,1,60);
 insert into power values(6,2,34);
 ```
 
-<p><img src="/images/2017-11-29-Oracle-PL-SQL-while-loop/createtable.png" alt="create table" align="center" width="400"></p>
+<img src="/images/2017-11-29-Oracle-PL-SQL-while-loop/createtable.png" alt="create table" align="center" width=307">
 
 #### 计算整月的电费
 
@@ -73,7 +75,7 @@ end;
 /
 ```
 
-<p><img src="/images/2017-11-29-Oracle-PL-SQL-while-loop/calculate.png" alt="calculate" align="center" width="400"></p>
+<p><img src="/images/2017-11-29-Oracle-PL-SQL-while-loop/calculate.png" alt="calculate" align="center" width="341"></p>
 
 #### 显示结果
 
@@ -81,4 +83,4 @@ end;
 select * from power;
 ```
 
-<p><img src="/images/2017-11-29-Oracle-PL-SQL-while-loop/result.png" alt="result" align="center" width="400"></p>
+<p><img src="/images/2017-11-29-Oracle-PL-SQL-while-loop/result.png" alt="result" align="center" width="254"></p>
