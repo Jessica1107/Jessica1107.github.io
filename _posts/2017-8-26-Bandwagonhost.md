@@ -8,8 +8,6 @@ keywords: shadowsocks，翻墙
 
 我想在这里讲一下我更换shadowsocks服务的一些事宜。
 
-<!-- more -->
-
 ## 原用服务
 
 我原本购买的shadowsocks服务是[https://portal.shadowsocks.la](https://portal.shadowsocks.la)，服务还不错，大家可以试试。这两天快要到期了，正在考虑是否要续费的问题。

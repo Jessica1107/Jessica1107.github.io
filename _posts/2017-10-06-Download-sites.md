@@ -6,11 +6,7 @@ description: 资源下载
 keywords: Blog, ed2k, BT
 ---
 
-> 文章来源：[https://blog.phpgao.com/download_sites.html](https://blog.phpgao.com/download_sites.html)
-
 无意中发现网上有老哥总结了这些资源站，忍不住转载一下，也方便我以后去找资源了。
-
-<!-- more -->
 
 为了塞满硬盘，一起努力吧！
 
@@ -47,3 +43,5 @@ keywords: Blog, ed2k, BT
 - [BTSOW - Tags](https://btso.pw/tags)
 - [Ultimate Emule Search](http://emule.synthasite.com/search.php)
 - [eMule Server 2016 Reliable Secure - eMule.com](http://www.emule.com/emule-server/)
+
+> 文章来源：[https://blog.phpgao.com/download_sites.html](https://blog.phpgao.com/download_sites.html)

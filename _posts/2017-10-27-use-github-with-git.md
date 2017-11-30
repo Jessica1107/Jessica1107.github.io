@@ -8,8 +8,6 @@ keywords: 笔记,git,github
 
 一直以来我都觉得GitHub是一个对于程序员来说极为有助的一个平台。最近在学校老是在编程，我把代码都放在了GitHub上，Git作为一个分布式版本控制软件，就成为了我的电脑和GitHub之间的桥梁。十分惭愧，我对Git和GitHub的使用还只会基本的操作，今天我就来讲一下这些基本操作。
 
-<!-- more -->
-
 ## Git简介
 
 引用自维基百科-[git词条](https://zh.wikipedia.org/wiki/Git)：
