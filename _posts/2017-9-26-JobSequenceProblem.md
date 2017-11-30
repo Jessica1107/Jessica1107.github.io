@@ -8,6 +8,8 @@ keywords: 笔记, C#，GIS算法
 
 有N件工作，输入每件工作的费时、最后完成的期限及工作的价值，试求可能的一个完成工作序列，使价值和最大。
 
+<!--more-->
+
 ## 原理
 
 1. 按照最后期限越短越先，其次价值越高越先，再次费时越短越先的标准对所有任务进行排序。
@@ -230,7 +232,7 @@ namespace 最佳工作序列
 
 ## 操作示意
 
-![最佳工作序列](/images/2017-9-26-JobSequenceProblem/JobSequenceProblem.png)
+<p><img src="/images/2017-9-26-JobSequenceProblem/JobSequenceProblem.png" alt="最佳工作序列" width="590"></p>
 
 **代码如果存在问题，请一定帮我指正!大神，谢谢了!**
 

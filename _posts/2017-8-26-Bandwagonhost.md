@@ -8,6 +8,8 @@ keywords: shadowsocks，翻墙
 
 我想在这里讲一下我更换shadowsocks服务的一些事宜。
 
+<!--more-->
+
 ## 原用服务
 
 我原本购买的shadowsocks服务是[https://portal.shadowsocks.la](https://portal.shadowsocks.la)，服务还不错，大家可以试试。这两天快要到期了，正在考虑是否要续费的问题。
@@ -45,23 +47,23 @@ keywords: shadowsocks，翻墙
 
 #### 创建 VPS 后，登录搬瓦工的 **Client Area**。在 **Services-My Services** 找到自己的VPS。
 
-<p><img src="/images/2017-8-26-Bandwagonhost/Myservice.png" alt="My Service" width="600"></p>
+![My Service](/images/2017-8-26-Bandwagonhost/Myservice.png)
 
 #### 下图就是我选购的 VPS 服务器，点击右侧的 **KiviVM Control Panel** 进入控制面板。
 
-<p><img src="/images/2017-8-26-Bandwagonhost/VPS.png" alt="VPS" width="600"></p>
+![VPS](/images/2017-8-26-Bandwagonhost/VPS.png)
 
 #### 一键安装服务只支持 **CentOS 6**，如果不是的话，需要在控制面板中的 **Install new OS** 重新安装系统。
 
-<p><img src="/images/2017-8-26-Bandwagonhost/Install%20OS.png" alt="Install OS" width="600"></p>
+![Install OS](/images/2017-8-26-Bandwagonhost/Install%20OS.png)
 
 #### 我的 SS 服务已经安装过了，我就展示一下没有安装过的 SSR 的安装界面，SS 的安装界面也类似。只要点击 **Install ShadowsocksR Server** ，系统就会自动进行傻瓜式安装。
 
-<p><img src="/images/2017-8-26-Bandwagonhost/Install.png" alt="Install" width="600"></p>
+![Install](/images/2017-8-26-Bandwagonhost/Install.png)
 
 #### 安装完成以后，在这个界面将会显示服务的参数。下方提供了各个版本的客户端下载链接和详细的配置使用教程。
 
-<p><img src="/images/2017-8-26-Bandwagonhost/Server.png" alt="Server" width="600"></p>
+![Server](/images/2017-8-26-Bandwagonhost/Server.png)
 
 ### 使用体验
 

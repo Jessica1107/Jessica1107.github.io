@@ -8,6 +8,8 @@ keywords: 笔记, ASP.NET, MVC
 
 本文总结了SQL Server数据库的自带角色成员身份权限。
 
+<!--more-->
+
 |数据库级别的角色名称|说明|
 |:-----------------|:---|
 |db_accessadmin|db_accessadmin固定数据库角色的成员可以为Windows登录名、Windows组和SQL Server登录名添加或删除数据库访问权限。|

@@ -8,7 +8,9 @@ keywords: 注册码,app
 
 好用的Markdown编辑器MarkdownPad。
 
-<p><img src="/images/2017-8-24-MarkdownPad/markdownpad.png" alt="MarkdownPad 2" width="500"></p>
+<!--more-->
+
+![MarkdownPad 2](/images/2017-8-24-MarkdownPad/markdownpad.png)
 
 ### 邮箱
 

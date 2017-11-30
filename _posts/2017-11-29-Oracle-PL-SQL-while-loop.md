@@ -8,6 +8,8 @@ keywords: 笔记, Oracle, while loop, 循环, PL/SQL
 
 用while loop语句进行循环计算的一个实例。最近做题遇到，在此记录。
 
+<!--more-->
+
 ## WHILE-LOOP语法
 
 当**条件为真**时，执行语句。

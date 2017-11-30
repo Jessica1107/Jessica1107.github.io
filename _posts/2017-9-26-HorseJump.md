@@ -8,6 +8,8 @@ keywords: 笔记, C#
 
 有一 m * n 的棋盘(即棋盘由m行和n列)，一马放在棋盘中任意位置，马按中国象棋跳法，从初始位置起跳，跳至边界后返回，求所有能返回初始位置的周游路线。
 
+<!--more-->
+
 ## 原理
 
 1. 遍历棋盘
@@ -159,6 +161,6 @@ namespace 跳马
 
 ## 操作示意
 
-![Horse Jump](/images/2017-9-26-HorseJump/HorseJump.png)
+<p><img src="/images/2017-9-26-HorseJump/HorseJump.png" alt="Horse Jump" width="795"></p>
 
 **代码如果存在问题，请一定帮我指正!大神，谢谢了!**
