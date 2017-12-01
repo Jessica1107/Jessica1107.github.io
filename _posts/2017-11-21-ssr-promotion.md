@@ -15,7 +15,7 @@ keywords: ShadowsocksR，翻墙
 我想要推荐的这个服务提供商叫做**RfcNetwork**，我现在作为主力自用。
 
 这是我的**推广链接**，有兴趣可以点这个链接购买。
-[https://www.rfcvps.xyz/aff.php?aff=158](https://www.rfcvps.xyz/aff.php?aff=158)
+[https://www.rfcvps.club/aff.php?aff=158](https://www.rfcvps.club/aff.php?aff=158)
 
 ### 资费
 
@@ -37,4 +37,4 @@ keywords: ShadowsocksR，翻墙
 
 于是我就想到了换服务商，这个服务提供商我是在Google+上偶然发现的，真的是十分幸运了。我不知道是怎样将价格压制得这么低的，我只知道现在服务质量非常好，不仅网速快，不限设备，还支持UDP转发，流量也并不十分吝啬。
 
-有兴趣的话，可以买个10元的试用一下嘛，推荐用我的[推广链接](https://www.rfcvps.xyz/aff.php?aff=158)哦。
+有兴趣的话，可以买个10元的试用一下嘛，推荐用我的[推广链接](https://www.rfcvps.club/aff.php?aff=158)哦。
