@@ -12,11 +12,11 @@ keywords: 笔记, Oracle, break on, SQL*Plus
 
 ## BREAK ON语法
 
-1. BRE[AK] [ON report_element [action [action]]] ...
+1. ```BRE[AK] [ON report_element [action [action]]] ...```
 
-	- report_element的语法为{column|expr|ROW|REPORT}
+	- report_element的语法为```{column|expr|ROW|REPORT}```
 
-	- action的语法为[SKI[P] n|[SKI[P]] PAGE] [NODUP[LICATES]|DUP[LICATES]]
+	- action的语法为```[SKI[P] n|[SKI[P]] PAGE] [NODUP[LICATES]|DUP[LICATES]]```
 
 2. 指定报告中发生更改的位置以及要执行的格式化操作，比如：
 
@@ -30,11 +30,11 @@ keywords: 笔记, Oracle, break on, SQL*Plus
 
 ### 英文原文
 
-BRE[AK] [ON report_element [action [action]]] ...
+```BRE[AK] [ON report_element [action [action]]] ...```
 
-where report_element has the syntax {column|expr|ROW|REPORT}
+where report_element has the syntax ```{column|expr|ROW|REPORT}```
 
-and action has the syntax [SKI[P] n|[SKI[P]] PAGE] [NODUP[LICATES]|DUP[LICATES]]
+and action has the syntax ```[SKI[P] n|[SKI[P]] PAGE] [NODUP[LICATES]|DUP[LICATES]]```
 
 Specifies where changes occur in a report and the formatting action to perform, such as:
 
@@ -55,7 +55,7 @@ Enter BREAK with no clauses to list the current BREAK definition.
 |clear breaks|清除所有的break定义|
 |break on column|在该列上中断|
 |break on row|在每一行上中断|
-|break on Page|在每一页上中断||
+|break on Page|在每一页上中断|
 |break on report|在每一报告上中断|
 |skip n|跳过n行|
 |skip page|跳过未用完的页|
