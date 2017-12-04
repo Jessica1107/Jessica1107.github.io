@@ -3,7 +3,7 @@ layout: post
 title: Oracle PL/SQL while loop循环实例
 categories: 笔记
 description: Oracle数据库学习
-keywords: 笔记, Oracle, while loop, 循环, PL/SQL
+keywords: 笔记, Oracle, while-loop, 循环, PL/SQL
 ---
 
 用while loop语句进行循环计算的一个实例。最近做题遇到，在此记录。
