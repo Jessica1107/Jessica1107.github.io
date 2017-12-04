@@ -8,6 +8,8 @@ keywords: 笔记, Oracle, break on, SQL*Plus
 
 使用BREAK ON语句进行排列的实例
 
+<!--more-->
+
 ## BREAK ON语法
 
 1. BRE[AK] [ON report_element [action [action]]] ...
