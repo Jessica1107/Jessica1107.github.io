@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans" prefix="og: http://ogp.me/ns#" class="han-init">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>初试自建shadowsocks服务器 &mdash; 随遇而安</title>
+    <link rel="stylesheet" href="http://localhost:4000/assets/vendor/primer-css/css/primer.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/vendor/primer-markdown/dist/user-content.min.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/vendor/octicons/octicons/octicons.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/components/collection.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/components/repo-card.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/sections/repo-list.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/sections/mini-repo-list.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/components/boxed-group.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/globals/common.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/vendor/share.js/dist/css/share.min.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/globals/responsive.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/posts/index.css">
+    <!-- Latest compiled and minified CSS -->
+    
+
+    
+    <link rel="canonical" href="http://localhost:4000/2017/08/26/Bandwagonhost/">
+    <link rel="alternate" type="application/atom+xml" title="随遇而安" href="/feed.xml">
+    <link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+    
+    <meta property="og:title" content="初试自建shadowsocks服务器">
+      
+    <meta name="keywords" content="shadowsocks，翻墙">
+    <meta name="og:keywords" content="shadowsocks，翻墙">
+      
+    <meta name="description" content="我想在这里讲一下我更换shadowsocks服务的一些事宜。">
+    <meta name="og:description" content="我想在这里讲一下我更换shadowsocks服务的一些事宜。">
+      
+    
+    
+        
+    
+    <meta property="og:url" content="http://localhost:4000/2017/08/26/Bandwagonhost/">
+    <meta property="og:site_name" content="随遇而安">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN" />
+    
+    <meta property="article:published_time" content="2017-08-26">
+    
+    <script src="http://localhost:4000/assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="http://localhost:4000/assets/js/jquery-ui.js"></script>
+    <script type="text/javascript">
+    function toggleMenu() {
+        var nav = document.getElementsByClassName("site-header-nav")[0];
+        if (nav.style.display == "inline-flex") {
+          nav.style.display = "none";
+        } else {
+          nav.style.display = "inline-flex";
+        }
+    }
+    </script>
+</head>
+<body class="" data-mz="">
+    <header class="site-header">
+        <div class="container">
+            <h1><a href="http://localhost:4000/" title="随遇而安"><span class="octicon octicon-mark-github"></span> 随遇而安</a></h1>
+            <button class="collapsed mobile-visible" type="button" onclick="toggleMenu();">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <nav class="site-header-nav" role="navigation">
+                
+                <a href="/" class=" site-header-nav-item" target="" title="首页">首页</a>
+                
+                <a href="/categories/" class=" site-header-nav-item" target="" title="分类">分类</a>
+                
+                <a href="/about/" class=" site-header-nav-item" target="" title="关于">关于</a>
+                
+            </nav>
+        </div>
+    </header>
+    <!-- / header -->
+
+    <section class="collection-head small geopattern" data-pattern-id="初试自建shadowsocks">
+<div class="container">
+  <div class="columns">
+    <div class="column three-fourths">
+      <div class="collection-title">
+        <h1 class="collection-header">初试自建shadowsocks服务器</h1>
+        <div class="collection-info">
+          
+          <span class="meta-info">
+            <span class="octicon octicon-calendar"></span> 2017/08/26
+          </span>
+          
+          
+          <span class="meta-info">
+            <span class="octicon octicon-file-directory"></span>
+            <a href="http://localhost:4000/categories/#科学上网" title="科学上网">科学上网</a>
+          </span>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<!-- / .banner -->
+<section class="container content">
+<div class="columns">
+  <div class="column three-fourths" >
+    <article class="article-content markdown-body">
+    <p>我想在这里讲一下我更换shadowsocks服务的一些事宜。</p>
+
+<!--more-->
+
+<h2 id="原用服务">原用服务</h2>
+
+<p>我原本购买的shadowsocks服务是<a href="https://portal.shadowsocks.la">https://portal.shadowsocks.la</a>，服务还不错，大家可以试试。这两天快要到期了，正在考虑是否要续费的问题。</p>
+
+<p>我犹豫的原因主要有这么几点：</p>
+
+<ol>
+  <li>我买的这个shadowsocks服务提供了九个服务器地址，分别处于美国、日本、新加坡、香港。但是，可以正常访问，速度尚可的，没有几个，我印象里也就一个美国的和一个香港的服务器比较顺畅。</li>
+  <li>由于一些众所周知的原因，服务商的地址一直在换。虽然会在主页提前通知，但如果没有经常关注，我怕哪天我就找不到了。</li>
+  <li>服务器不限制带宽和流量，但是，我平均流量每个月也就10G多，并没有那么大的需求。</li>
+  <li>还有就是没有对服务器的管理权，心里慌啊，不如自己搭一个。</li>
+  <li>我购买的服务的价格是每年15.7$，限制同时使用的用户数，租一个VPS的花费也差不多了吧，还可以和朋友共享来分摊费用，岂不美哉。</li>
+</ol>
+
+<hr />
+
+<h2 id="bandwagon-host">Bandwagon Host</h2>
+
+<p>今早看到一篇博文，叫做<a href="https://www.auooo.com/2015/06/26/shadowsocks%EF%BC%88%E5%BD%B1%E6%A2%AD%EF%BC%89%E4%B8%8D%E5%AE%8C%E5%85%A8%E6%8C%87%E5%8D%97/#configuration">ShadowSocks（影梭）不完全指南</a>。文章中采用自己搭建shadowsocks服务器的方式，还推荐了不少各个价位不同服务商提供的VPS服务。</p>
+
+<p>我选择了<a href="https://bandwagonhost.com">搬瓦工</a>的一款每月2.99$的服务。配置规格如下：</p>
+
+<ul>
+  <li>SSD: 10 GB RAID-10</li>
+  <li>RAM: 1 GB</li>
+  <li>CPU: 1x Intel Xeon</li>
+  <li>Transfer: 1000 GB/mo</li>
+  <li>Link speed: 1Gigabit</li>
+  <li>Location: US, California</li>
+</ul>
+
+<p>这个配置在我看来已经完全足够使用，性价比非常高，这么大的流量怕是10个人一起用也够哦。此外，<a href="https://bandwagonhost.com">搬瓦工</a>支持<strong>支付宝</strong>支付，可谓是十分良心了。</p>
+
+<p>注意：如果玩游戏，延迟要求比较高的话，不适合选择这一款VPS。亲测平均延迟200ms。</p>
+
+<h3 id="安装shadowsocks服务">安装Shadowsocks服务</h3>
+
+<p>估计这个档次的 VPS 多用来进行番羽土啬，搬瓦工支持一键安装Shadowsocks，完全傻瓜式操作。</p>
+
+<h4 id="创建-vps-后登录搬瓦工的-client-area在-services-my-services-找到自己的vps">创建 VPS 后，登录搬瓦工的 <strong>Client Area</strong>。在 <strong>Services-My Services</strong> 找到自己的VPS。</h4>
+
+<p><img src="/images/2017-8-26-Bandwagonhost/Myservice.png" alt="My Service" /></p>
+
+<h4 id="下图就是我选购的-vps-服务器点击右侧的-kivivm-control-panel-进入控制面板">下图就是我选购的 VPS 服务器，点击右侧的 <strong>KiviVM Control Panel</strong> 进入控制面板。</h4>
+
+<p><img src="/images/2017-8-26-Bandwagonhost/VPS.png" alt="VPS" /></p>
+
+<h4 id="一键安装服务只支持-centos-6如果不是的话需要在控制面板中的-install-new-os-重新安装系统">一键安装服务只支持 <strong>CentOS 6</strong>，如果不是的话，需要在控制面板中的 <strong>Install new OS</strong> 重新安装系统。</h4>
+
+<p><img src="/images/2017-8-26-Bandwagonhost/Install%20OS.png" alt="Install OS" /></p>
+
+<h4 id="我的-ss-服务已经安装过了我就展示一下没有安装过的-ssr-的安装界面ss-的安装界面也类似只要点击-install-shadowsocksr-server-系统就会自动进行傻瓜式安装">我的 SS 服务已经安装过了，我就展示一下没有安装过的 SSR 的安装界面，SS 的安装界面也类似。只要点击 <strong>Install ShadowsocksR Server</strong> ，系统就会自动进行傻瓜式安装。</h4>
+
+<p><img src="/images/2017-8-26-Bandwagonhost/Install.png" alt="Install" /></p>
+
+<h4 id="安装完成以后在这个界面将会显示服务的参数下方提供了各个版本的客户端下载链接和详细的配置使用教程">安装完成以后，在这个界面将会显示服务的参数。下方提供了各个版本的客户端下载链接和详细的配置使用教程。</h4>
+
+<p><img src="/images/2017-8-26-Bandwagonhost/Server.png" alt="Server" /></p>
+
+<h3 id="使用体验">使用体验</h3>
+
+<ol>
+  <li>首先配置简单，不用我操作服务器。</li>
+  <li>网速令人满意，在 YouTube 上看 1080P 视频流畅无卡顿。</li>
+  <li>有时会抽风，加载稍慢，过会便会自己恢复。</li>
+  <li>延迟亲测稍高，不适合延迟要求较高的用户。</li>
+</ol>
+
+    </article>
+    <div class="share">
+      <div class="share-component"></div>
+    </div>
+    <div class="comment">
+      
+	
+		<!-- Remarkbox - Your readers want to communicate with you -->
+		<div id="remarkbox-div">
+			<noscript>
+				<iframe id=remarkbox-iframe src="https://my.remarkbox.com/embed?nojs=true" style="height:600px;width:100%;border:none!important" tabindex=0></iframe>
+			</noscript>
+		</div>
+		<script src="https://my.remarkbox.com/static/js/iframe-resizer/iframeResizer.min.js"></script>
+		<script>
+			var rb_owner_key = "a7ec1d2e-c233-11e7-a40d-040140774501";
+			var thread_uri = window.location.href;
+			var thread_fragment = window.location.hash;
+			function create_remarkbox_iframe() {
+				var src = "https://my.remarkbox.com/embed?rb_owner_key=" + rb_owner_key + "&thread_uri=" + thread_uri;
+				var ifrm = document.createElement("iframe");
+				ifrm.setAttribute("id", "remarkbox-iframe");
+				ifrm.setAttribute("scrolling", "no");
+				ifrm.setAttribute("src", src);
+				ifrm.setAttribute("frameborder", "0");
+				ifrm.setAttribute("tabindex", "0");
+				ifrm.setAttribute("title", "Remarkbox");
+				ifrm.style.width = "100%";
+				document.getElementById("remarkbox-div").appendChild(ifrm);
+			}
+			create_remarkbox_iframe();
+			iFrameResize(
+				{
+					checkOrigin: ["https://my.remarkbox.com"],
+					inPageLinks: true,
+					initCallback: function(e) {e.iFrameResizer.moveToAnchor(thread_fragment)}
+				},
+				document.getElementById("remarkbox-iframe")
+			);
+		</script>
+		
+
+    </div>
+  </div>
+  <div class="column one-fourth">
+    
+<h3>Search</h3>
+<div id="site_search">
+    <input type="text" id="search_box" placeholder="Search">
+    <button class="btn btn-default" id="site_search_do"><span class="octicon octicon-search"></span></button>
+</div>
+
+<ul id="search_results"></ul>
+
+<link rel="stylesheet" type="text/css" href="http://localhost:4000/assets/css/modules/sidebar-search.css">
+<script src="http://localhost:4000/assets/js/lunr.min.js"></script>
+<script src="http://localhost:4000/assets/js/search.js"></script>
+
+
+    
+
+    
+<h3 class="post-directory-title mobile-hidden">Table of Contents</h3>
+<div id="post-directory-module" class="mobile-hidden">
+  <section class="post-directory">
+  <!-- Links that trigger the jumping -->
+  <!-- Added by javascript below -->
+  <dl></dl>
+  </section>
+</div>
+
+<script src="http://localhost:4000/assets/js/jquery.toc.js"></script>
+
+  </div>
+</div>
+</section>
+<!-- /section.content -->
+
+    <footer class="container">
+        <div class="site-footer" role="contentinfo">
+            <div class="copyright left mobile-block">
+                    © 2017
+                    <span title="Ziyang Sun">Ziyang Sun</span>
+                    <a href="javascript:window.scrollTo(0,0)" class="right mobile-visible">TOP</a>
+            </div>
+
+            <ul class="site-footer-links right mobile-hidden">
+                <li>
+                    <a href="javascript:window.scrollTo(0,0)" >TOP</a>
+                </li>
+            </ul>
+            <a href="http://github.com/zvonimirsun/zvonimirsun.github.io" target="_blank" aria-label="view source code">
+                <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+            </a>
+            <ul class="site-footer-links mobile-hidden">
+                
+                <li>
+                    <a href="/" title="首页" target="">首页</a>
+                </li>
+                
+                <li>
+                    <a href="/categories/" title="分类" target="">分类</a>
+                </li>
+                
+                <li>
+                    <a href="/about/" title="关于" target="">关于</a>
+                </li>
+                
+                <li><a href="/feed.xml"><span class="octicon octicon-rss" style="color:orange;"></span></a></li>
+            </ul>
+
+        </div>
+    </footer>
+    <!-- / footer -->
+    <script src="http://localhost:4000/assets/vendor/share.js/dist/js/share.min.js"></script>
+    <script src="http://localhost:4000/assets/js/geopattern.js"></script>
+    <script src="http://localhost:4000/assets/js/prism.js"></script>
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/globals/prism.css">
+    <script>
+      jQuery(document).ready(function($) {
+        // geopattern
+        $('.geopattern').each(function(){
+          $(this).geopattern($(this).data('pattern-id'));
+        });
+       // hljs.initHighlightingOnLoad();
+      });
+    </script>
+    
+    <div style="display:none">
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-105003596-1', 'auto');
+        ga('send', 'pageview');
+
+      </script>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans" prefix="og: http://ogp.me/ns#" class="han-init">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>道格拉斯—普克法 &mdash; 随遇而安</title>
+    <link rel="stylesheet" href="http://localhost:4000/assets/vendor/primer-css/css/primer.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/vendor/primer-markdown/dist/user-content.min.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/vendor/octicons/octicons/octicons.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/components/collection.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/components/repo-card.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/sections/repo-list.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/sections/mini-repo-list.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/components/boxed-group.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/globals/common.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/vendor/share.js/dist/css/share.min.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/globals/responsive.css">
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/posts/index.css">
+    <!-- Latest compiled and minified CSS -->
+    
+
+    
+    <link rel="canonical" href="http://localhost:4000/2017/10/17/Douglas-Peucker-algorithm/">
+    <link rel="alternate" type="application/atom+xml" title="随遇而安" href="/feed.xml">
+    <link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+    
+    <meta property="og:title" content="道格拉斯—普克法">
+      
+    <meta name="keywords" content="笔记,C#,GIS算法">
+    <meta name="og:keywords" content="笔记,C#,GIS算法">
+      
+    <meta name="description" content="算法描述道格拉斯-普克算法(Douglas–Peucker algorithm，亦称为拉默-道格拉斯-普克算法、迭代适应点算法、分裂与合并算法)是将曲线近似表示为一系列点，并减少点的数量的一种算法。它的优点是具有平移和旋转不变性，给定曲线与阈值后，抽样结果一定。">
+    <meta name="og:description" content="算法描述道格拉斯-普克算法(Douglas–Peucker algorithm，亦称为拉默-道格拉斯-普克算法、迭代适应点算法、分裂与合并算法)是将曲线近似表示为一系列点，并减少点的数量的一种算法。它的优点是具有平移和旋转不变性，给定曲线与阈值后，抽样结果一定。">
+      
+    
+    
+        
+    
+    <meta property="og:url" content="http://localhost:4000/2017/10/17/Douglas-Peucker-algorithm/">
+    <meta property="og:site_name" content="随遇而安">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="zh_CN" />
+    
+    <meta property="article:published_time" content="2017-10-17">
+    
+    <script src="http://localhost:4000/assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="http://localhost:4000/assets/js/jquery-ui.js"></script>
+    <script type="text/javascript">
+    function toggleMenu() {
+        var nav = document.getElementsByClassName("site-header-nav")[0];
+        if (nav.style.display == "inline-flex") {
+          nav.style.display = "none";
+        } else {
+          nav.style.display = "inline-flex";
+        }
+    }
+    </script>
+</head>
+<body class="" data-mz="">
+    <header class="site-header">
+        <div class="container">
+            <h1><a href="http://localhost:4000/" title="随遇而安"><span class="octicon octicon-mark-github"></span> 随遇而安</a></h1>
+            <button class="collapsed mobile-visible" type="button" onclick="toggleMenu();">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <nav class="site-header-nav" role="navigation">
+                
+                <a href="/" class=" site-header-nav-item" target="" title="首页">首页</a>
+                
+                <a href="/categories/" class=" site-header-nav-item" target="" title="分类">分类</a>
+                
+                <a href="/about/" class=" site-header-nav-item" target="" title="关于">关于</a>
+                
+            </nav>
+        </div>
+    </header>
+    <!-- / header -->
+
+    <section class="collection-head small geopattern" data-pattern-id="道格拉斯—普克法">
+<div class="container">
+  <div class="columns">
+    <div class="column three-fourths">
+      <div class="collection-title">
+        <h1 class="collection-header">道格拉斯—普克法</h1>
+        <div class="collection-info">
+          
+          <span class="meta-info">
+            <span class="octicon octicon-calendar"></span> 2017/10/17
+          </span>
+          
+          
+          <span class="meta-info">
+            <span class="octicon octicon-file-directory"></span>
+            <a href="http://localhost:4000/categories/#笔记" title="笔记">笔记</a>
+          </span>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<!-- / .banner -->
+<section class="container content">
+<div class="columns">
+  <div class="column three-fourths" >
+    <article class="article-content markdown-body">
+    <h2 id="算法描述">算法描述</h2>
+
+<p>道格拉斯-普克算法(Douglas–Peucker algorithm，亦称为拉默-道格拉斯-普克算法、迭代适应点算法、分裂与合并算法)是将曲线近似表示为一系列点，并减少点的数量的一种算法。它的优点是具有平移和旋转不变性，给定曲线与阈值后，抽样结果一定。</p>
+
+<!--more-->
+
+<h2 id="思路">思路</h2>
+
+<ul>
+  <li>首先，将一条曲线首末点连一条直线</li>
+  <li>求出其余各点到该直线的距离</li>
+  <li>选其最大者与规定的临界值相比较
+    <ul>
+      <li>若大于临界值，则离该直线距离最大的点保留</li>
+      <li>否则将直线两端间各点全部舍去</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="/images/2017-10-17-Douglas-Peucker-algorithm/Douglas-Peucker.png" alt="Douglas-Peucker" /></p>
+
+<h2 id="要求">要求</h2>
+
+<ol>
+  <li>根据道格拉斯一普克法，编写程序对经过兰勃特投影的中国版图数据进行抽稀处理 （不限语言）</li>
+  <li>屏幕绘图显示压缩前后的地图数据</li>
+  <li>数据压缩率为50%</li>
+</ol>
+
+<h2 id="代码">代码</h2>
+
+<p>Github库地址:<a href="https://github.com/ZvonimirSun/DouglasPeucker">https://github.com/ZvonimirSun/DouglasPeucker</a></p>
+
+<div class="language-csharp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.Windows.Forms</span><span class="p">;</span>
+<span class="k">using</span> <span class="nn">System.IO</span><span class="p">;</span>
+
+<span class="k">namespace</span> <span class="err">道格拉斯</span><span class="nn">_</span><span class="err">普克法</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">partial</span> <span class="k">class</span> <span class="nc">DouglasPeucker</span> <span class="p">:</span> <span class="n">Form</span>
+    <span class="p">{</span>
+        <span class="k">public</span> <span class="nf">DouglasPeucker</span><span class="p">()</span>
+        <span class="p">{</span>
+            <span class="nf">InitializeComponent</span><span class="p">();</span>
+        <span class="p">}</span>
+
+        <span class="k">public</span> <span class="k">struct</span> <span class="nc">Point</span>
+        <span class="p">{</span>
+            <span class="k">public</span> <span class="kt">double</span> <span class="n">x</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+            <span class="k">public</span> <span class="kt">double</span> <span class="n">y</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+            <span class="k">public</span> <span class="kt">bool</span> <span class="n">existance</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// 道格拉斯普拉格压缩算法</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+        <span class="k">public</span> <span class="k">class</span> <span class="nc">Compress</span>
+        <span class="p">{</span>
+            <span class="k">public</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Point</span><span class="p">[</span><span class="k">]&gt;</span> <span class="n">lineList</span> <span class="p">=</span> <span class="k">new</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Point</span><span class="p">[</span><span class="k">]&gt;</span><span class="p">();</span>
+            <span class="k">private</span> <span class="kt">double</span> <span class="n">e</span><span class="p">;</span><span class="c1">// 误差限制</span>
+
+            <span class="c1">/// &lt;summary&gt;</span>
+            <span class="c1">/// 运行算法</span>
+            <span class="c1">/// &lt;/summary&gt;</span>
+            <span class="c1">/// &lt;param name="filePath"&gt;文档路径&lt;/param&gt;</span>
+            <span class="c1">/// &lt;param name="outPath"&gt;输出路径&lt;/param&gt;</span>
+            <span class="k">public</span> <span class="nf">Compress</span><span class="p">(</span><span class="kt">string</span> <span class="n">filePath</span><span class="p">,</span> <span class="kt">string</span> <span class="n">outPath</span><span class="p">,</span> <span class="kt">double</span> <span class="n">e</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">this</span><span class="p">.</span><span class="n">e</span> <span class="p">=</span> <span class="n">e</span><span class="p">;</span>
+                <span class="nf">readFile</span><span class="p">(</span><span class="n">filePath</span><span class="p">);</span>
+                <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">lineList</span><span class="p">.</span><span class="n">Count</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+                <span class="p">{</span>
+                    <span class="nf">compressFile</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="n">lineList</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="m">0</span><span class="p">].</span><span class="n">x</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+                <span class="p">}</span>
+                <span class="nf">writeFile</span><span class="p">(</span><span class="n">outPath</span><span class="p">);</span>
+            <span class="p">}</span>
+
+            <span class="c1">/// &lt;summary&gt;</span>
+            <span class="c1">/// 读取文档</span>
+            <span class="c1">/// &lt;/summary&gt;</span>
+            <span class="c1">/// &lt;param name="P"&gt;文档所在路径&lt;/param&gt;</span>
+            <span class="k">void</span> <span class="nf">readFile</span><span class="p">(</span><span class="kt">string</span> <span class="n">P</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">try</span>
+                <span class="p">{</span>
+                    <span class="c1">// </span>
+                    <span class="kt">int</span> <span class="n">flag</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+                    <span class="n">StreamReader</span> <span class="n">sr</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">StreamReader</span><span class="p">(</span><span class="n">P</span><span class="p">);</span>
+                    <span class="n">Point</span><span class="p">[]</span> <span class="n">pointList</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Point</span><span class="p">[</span><span class="m">1000</span><span class="p">];</span>
+                    <span class="kt">int</span> <span class="n">count</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+                    <span class="k">while</span> <span class="p">(!</span><span class="n">sr</span><span class="p">.</span><span class="n">EndOfStream</span><span class="p">)</span>
+                    <span class="p">{</span>
+                        <span class="c1">// 按行读取文件</span>
+                        <span class="kt">string</span> <span class="n">line</span> <span class="p">=</span> <span class="n">sr</span><span class="p">.</span><span class="nf">ReadLine</span><span class="p">();</span>
+
+                        <span class="c1">// 判断是否为线的开始</span>
+                        <span class="kt">int</span> <span class="n">temp</span><span class="p">;</span>
+                        <span class="k">if</span> <span class="p">(</span><span class="kt">int</span><span class="p">.</span><span class="nf">TryParse</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="k">out</span> <span class="n">temp</span><span class="p">))</span>
+                        <span class="p">{</span>
+                            <span class="n">pointList</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Point</span><span class="p">[</span><span class="m">1000</span><span class="p">];</span>
+                            <span class="n">count</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+                            <span class="n">flag</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span>
+                            <span class="k">continue</span><span class="p">;</span>
+                        <span class="p">}</span>
+
+                        <span class="c1">// 判断结尾</span>
+                        <span class="k">if</span> <span class="p">(</span><span class="n">line</span> <span class="p">==</span> <span class="s">"END"</span><span class="p">)</span>
+                        <span class="p">{</span>
+                            <span class="c1">// 线的结束</span>
+                            <span class="k">if</span> <span class="p">(</span><span class="n">flag</span> <span class="p">==</span> <span class="m">1</span><span class="p">)</span>
+                            <span class="p">{</span>
+                                <span class="n">pointList</span><span class="p">[</span><span class="m">0</span><span class="p">].</span><span class="n">x</span> <span class="p">=</span> <span class="n">count</span><span class="p">;</span>
+
+                                <span class="n">lineList</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="n">pointList</span><span class="p">);</span>
+                                <span class="n">flag</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span>
+                                <span class="k">continue</span><span class="p">;</span>
+                            <span class="p">}</span>
+                            <span class="k">if</span> <span class="p">(</span><span class="n">flag</span> <span class="p">==</span> <span class="m">0</span><span class="p">)</span>
+                            <span class="p">{</span>
+                                <span class="k">break</span><span class="p">;</span>
+                            <span class="p">}</span>
+                        <span class="p">}</span>
+
+                        <span class="c1">// 如果不是开头或结尾，则读取点</span>
+                        <span class="kt">string</span><span class="p">[]</span> <span class="n">p</span> <span class="p">=</span> <span class="n">line</span><span class="p">.</span><span class="nf">Split</span><span class="p">(</span><span class="sc">','</span><span class="p">);</span>
+
+                        <span class="n">count</span><span class="p">++;</span>
+                        <span class="n">pointList</span><span class="p">[</span><span class="n">count</span><span class="p">].</span><span class="n">x</span> <span class="p">=</span> <span class="kt">double</span><span class="p">.</span><span class="nf">Parse</span><span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="m">0</span><span class="p">]);</span>
+                        <span class="n">pointList</span><span class="p">[</span><span class="n">count</span><span class="p">].</span><span class="n">y</span> <span class="p">=</span> <span class="kt">double</span><span class="p">.</span><span class="nf">Parse</span><span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="m">1</span><span class="p">]);</span>
+                        <span class="n">pointList</span><span class="p">[</span><span class="n">count</span><span class="p">].</span><span class="n">existance</span> <span class="p">=</span> <span class="k">true</span><span class="p">;</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+                <span class="k">catch</span>
+                <span class="p">{</span>
+                    <span class="n">MessageBox</span><span class="p">.</span><span class="nf">Show</span><span class="p">(</span><span class="s">"Error!"</span><span class="p">);</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+
+            <span class="c1">/// &lt;summary&gt;</span>
+            <span class="c1">/// 压缩算法</span>
+            <span class="c1">/// &lt;/summary&gt;</span>
+            <span class="c1">/// &lt;param name="FirstPoint"&gt;线的开始节点&lt;/param&gt;</span>
+            <span class="c1">/// &lt;param name="LastPoint"&gt;线的结束节点&lt;/param&gt;</span>
+            <span class="c1">/// &lt;param name="index"&gt;线的索引&lt;/param&gt;</span>
+            <span class="k">void</span> <span class="nf">compressFile</span><span class="p">(</span><span class="kt">int</span> <span class="n">FirstPoint</span><span class="p">,</span> <span class="kt">int</span> <span class="n">LastPoint</span><span class="p">,</span> <span class="kt">int</span> <span class="n">index</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="kt">double</span> <span class="n">max</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span><span class="c1">// 记录最大距离</span>
+                <span class="kt">int</span> <span class="n">FarthestPoint</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span><span class="c1">// 记录最远节点</span>
+
+                <span class="c1">// 如果只剩两个节点则退出</span>
+                <span class="k">if</span> <span class="p">((</span><span class="n">LastPoint</span> <span class="p">-</span> <span class="n">FirstPoint</span><span class="p">)</span> <span class="p">&gt;</span> <span class="m">1</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="c1">// 判断是否为环路</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">lineList</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="n">FirstPoint</span><span class="p">].</span><span class="n">x</span> <span class="p">==</span> <span class="n">lineList</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="n">LastPoint</span><span class="p">].</span><span class="n">x</span> <span class="p">&amp;&amp;</span> <span class="n">lineList</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="n">FirstPoint</span><span class="p">].</span><span class="n">y</span> <span class="p">==</span> <span class="n">lineList</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="n">LastPoint</span><span class="p">].</span><span class="n">y</span><span class="p">)</span>
+                    <span class="p">{</span>
+                        <span class="kt">int</span> <span class="n">mid</span> <span class="p">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)((</span><span class="n">FirstPoint</span> <span class="p">+</span> <span class="n">LastPoint</span><span class="p">)</span> <span class="p">/</span> <span class="m">2</span><span class="p">);</span><span class="c1">// 拆分环路</span>
+                        <span class="nf">compressFile</span><span class="p">(</span><span class="n">FirstPoint</span><span class="p">,</span> <span class="n">mid</span><span class="p">,</span> <span class="n">index</span><span class="p">);</span>
+                        <span class="nf">compressFile</span><span class="p">(</span><span class="n">mid</span><span class="p">,</span> <span class="n">LastPoint</span><span class="p">,</span> <span class="n">index</span><span class="p">);</span>
+                    <span class="p">}</span>
+
+                    <span class="c1">// 寻找最大距离</span>
+                    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="n">FirstPoint</span> <span class="p">+</span> <span class="m">1</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">LastPoint</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+                    <span class="p">{</span>
+                        <span class="kt">double</span> <span class="n">temp</span> <span class="p">=</span> <span class="nf">pointToLineDistance</span><span class="p">(</span><span class="n">lineList</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="n">FirstPoint</span><span class="p">],</span> <span class="n">lineList</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="n">LastPoint</span><span class="p">],</span> <span class="n">lineList</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="n">i</span><span class="p">]);</span>
+                        <span class="k">if</span> <span class="p">(</span><span class="n">temp</span> <span class="p">&gt;</span> <span class="n">max</span><span class="p">)</span>
+                        <span class="p">{</span>
+                            <span class="n">max</span> <span class="p">=</span> <span class="n">temp</span><span class="p">;</span>
+                            <span class="n">FarthestPoint</span> <span class="p">=</span> <span class="n">i</span><span class="p">;</span>
+                        <span class="p">}</span>
+                    <span class="p">}</span>
+
+                    <span class="c1">// 根据界限判断是否压缩</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="n">max</span> <span class="p">&lt;=</span> <span class="n">e</span><span class="p">)</span>
+                    <span class="p">{</span>
+                        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="n">FirstPoint</span> <span class="p">+</span> <span class="m">1</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">LastPoint</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+                        <span class="p">{</span>
+                            <span class="n">lineList</span><span class="p">[</span><span class="n">index</span><span class="p">][</span><span class="n">i</span><span class="p">].</span><span class="n">existance</span> <span class="p">=</span> <span class="k">false</span><span class="p">;</span>
+                        <span class="p">}</span>
+                    <span class="p">}</span>
+                    <span class="k">else</span>
+                    <span class="p">{</span>
+                        <span class="nf">compressFile</span><span class="p">(</span><span class="n">FirstPoint</span><span class="p">,</span> <span class="n">FarthestPoint</span><span class="p">,</span> <span class="n">index</span><span class="p">);</span>
+                        <span class="nf">compressFile</span><span class="p">(</span><span class="n">FarthestPoint</span><span class="p">,</span> <span class="n">LastPoint</span><span class="p">,</span> <span class="n">index</span><span class="p">);</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+
+            <span class="c1">/// &lt;summary&gt;</span>
+            <span class="c1">/// 输出压缩后的文件</span>
+            <span class="c1">/// &lt;/summary&gt;</span>
+            <span class="c1">/// &lt;param name="P"&gt;输出路径&lt;/param&gt;</span>
+            <span class="k">void</span> <span class="nf">writeFile</span><span class="p">(</span><span class="kt">string</span> <span class="n">P</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">try</span>
+                <span class="p">{</span>
+                    <span class="n">StreamWriter</span> <span class="n">sw</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">StreamWriter</span><span class="p">(</span><span class="n">File</span><span class="p">.</span><span class="nf">Open</span><span class="p">(</span><span class="n">P</span><span class="p">,</span> <span class="n">FileMode</span><span class="p">.</span><span class="n">Create</span><span class="p">));</span>
+                    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">lineList</span><span class="p">.</span><span class="n">Count</span><span class="p">;</span> <span class="n">i</span><span class="p">++)</span>
+                    <span class="p">{</span>
+                        <span class="n">sw</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="n">i</span> <span class="p">+</span> <span class="m">1</span><span class="p">);</span>
+                        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="p">=</span> <span class="m">1</span><span class="p">;</span> <span class="n">j</span> <span class="p">&lt;=</span> <span class="n">lineList</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="m">0</span><span class="p">].</span><span class="n">x</span><span class="p">;</span> <span class="n">j</span><span class="p">++)</span>
+                        <span class="p">{</span>
+                            <span class="k">if</span> <span class="p">(</span><span class="n">lineList</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">].</span><span class="n">existance</span><span class="p">)</span>
+                            <span class="p">{</span>
+                                <span class="n">sw</span><span class="p">.</span><span class="nf">Write</span><span class="p">(</span><span class="s">"{0},{1}"</span><span class="p">,</span> <span class="n">lineList</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">].</span><span class="n">x</span><span class="p">,</span> <span class="n">lineList</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">].</span><span class="n">y</span><span class="p">);</span>
+                                <span class="n">sw</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">();</span>
+                            <span class="p">}</span>
+                        <span class="p">}</span>
+                        <span class="n">sw</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"END"</span><span class="p">);</span>
+                    <span class="p">}</span>
+                    <span class="n">sw</span><span class="p">.</span><span class="nf">WriteLine</span><span class="p">(</span><span class="s">"END"</span><span class="p">);</span>
+                    <span class="n">sw</span><span class="p">.</span><span class="nf">Close</span><span class="p">();</span>
+                    <span class="n">MessageBox</span><span class="p">.</span><span class="nf">Show</span><span class="p">(</span><span class="s">"Success!"</span><span class="p">);</span>
+                <span class="p">}</span>
+                <span class="k">catch</span>
+                <span class="p">{</span>
+                    <span class="n">MessageBox</span><span class="p">.</span><span class="nf">Show</span><span class="p">(</span><span class="s">"Error!"</span><span class="p">);</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+
+            <span class="c1">/// &lt;summary&gt;</span>
+            <span class="c1">/// 计算点到线的距离</span>
+            <span class="c1">/// &lt;/summary&gt;</span>
+            <span class="c1">/// &lt;param name="A"&gt;直线的一个端点&lt;/param&gt;</span>
+            <span class="c1">/// &lt;param name="B"&gt;直线的另一个端点&lt;/param&gt;</span>
+            <span class="c1">/// &lt;param name="P"&gt;需要计算距离的点&lt;/param&gt;</span>
+            <span class="c1">/// &lt;returns&gt;返回距离&lt;/returns&gt;</span>
+            <span class="kt">double</span> <span class="nf">pointToLineDistance</span><span class="p">(</span><span class="n">Point</span> <span class="n">A</span><span class="p">,</span> <span class="n">Point</span> <span class="n">B</span><span class="p">,</span> <span class="n">Point</span> <span class="n">P</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="kt">double</span> <span class="n">normalLength</span> <span class="p">=</span> <span class="n">Math</span><span class="p">.</span><span class="nf">Sqrt</span><span class="p">((</span><span class="n">B</span><span class="p">.</span><span class="n">x</span> <span class="p">-</span> <span class="n">A</span><span class="p">.</span><span class="n">x</span><span class="p">)</span> <span class="p">*</span> <span class="p">(</span><span class="n">B</span><span class="p">.</span><span class="n">x</span> <span class="p">-</span> <span class="n">A</span><span class="p">.</span><span class="n">x</span><span class="p">)</span> <span class="p">+</span> <span class="p">(</span><span class="n">B</span><span class="p">.</span><span class="n">y</span> <span class="p">-</span> <span class="n">A</span><span class="p">.</span><span class="n">y</span><span class="p">)</span> <span class="p">*</span> <span class="p">(</span><span class="n">B</span><span class="p">.</span><span class="n">y</span> <span class="p">-</span> <span class="n">A</span><span class="p">.</span><span class="n">y</span><span class="p">));</span>
+                <span class="k">return</span> <span class="n">Math</span><span class="p">.</span><span class="nf">Abs</span><span class="p">((</span><span class="n">P</span><span class="p">.</span><span class="n">x</span> <span class="p">-</span> <span class="n">A</span><span class="p">.</span><span class="n">x</span><span class="p">)</span> <span class="p">*</span> <span class="p">(</span><span class="n">B</span><span class="p">.</span><span class="n">y</span> <span class="p">-</span> <span class="n">A</span><span class="p">.</span><span class="n">y</span><span class="p">)</span> <span class="p">-</span> <span class="p">(</span><span class="n">P</span><span class="p">.</span><span class="n">y</span> <span class="p">-</span> <span class="n">A</span><span class="p">.</span><span class="n">y</span><span class="p">)</span> <span class="p">*</span> <span class="p">(</span><span class="n">B</span><span class="p">.</span><span class="n">x</span> <span class="p">-</span> <span class="n">A</span><span class="p">.</span><span class="n">x</span><span class="p">))</span> <span class="p">/</span> <span class="n">normalLength</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// 打开文件</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+        <span class="k">private</span> <span class="k">void</span> <span class="nf">btnOpen_Click</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">EventArgs</span> <span class="n">e</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">using</span> <span class="p">(</span><span class="n">OpenFileDialog</span> <span class="n">OpenFD</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">OpenFileDialog</span><span class="p">())</span>     <span class="c1">//实例化一个 OpenFileDialog 的对象</span>
+            <span class="p">{</span>
+                <span class="n">OpenFD</span><span class="p">.</span><span class="n">Filter</span> <span class="p">=</span> <span class="s">"Generate Files (*.gen)|*.gen|"</span> <span class="p">+</span> <span class="s">"All files (*.*)|*.*"</span><span class="p">;</span>
+                <span class="c1">//定义打开的默认文件夹位置</span>
+                <span class="n">OpenFD</span><span class="p">.</span><span class="n">InitialDirectory</span> <span class="p">=</span> <span class="n">Environment</span><span class="p">.</span><span class="nf">GetFolderPath</span><span class="p">(</span><span class="n">Environment</span><span class="p">.</span><span class="n">SpecialFolder</span><span class="p">.</span><span class="n">MyDocuments</span><span class="p">);</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">OpenFD</span><span class="p">.</span><span class="nf">ShowDialog</span><span class="p">()</span> <span class="p">==</span> <span class="n">DialogResult</span><span class="p">.</span><span class="n">OK</span><span class="p">)</span>                            <span class="c1">//显示打开本地文件的窗体</span>
+                <span class="p">{</span>
+                    <span class="n">txtFile</span><span class="p">.</span><span class="n">Text</span> <span class="p">=</span> <span class="n">OpenFD</span><span class="p">.</span><span class="n">FileName</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="c1">/// &lt;summary&gt;</span>
+        <span class="c1">/// 压缩文件并输出</span>
+        <span class="c1">/// &lt;/summary&gt;</span>
+        <span class="c1">/// &lt;param name="sender"&gt;&lt;/param&gt;</span>
+        <span class="c1">/// &lt;param name="e"&gt;&lt;/param&gt;</span>
+        <span class="k">private</span> <span class="k">void</span> <span class="nf">btnCompress_Click</span><span class="p">(</span><span class="kt">object</span> <span class="n">sender</span><span class="p">,</span> <span class="n">EventArgs</span> <span class="n">e</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">txtFile</span><span class="p">.</span><span class="n">Text</span> <span class="p">!=</span> <span class="s">""</span><span class="p">)</span>
+            <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">txtE</span><span class="p">.</span><span class="n">Text</span> <span class="p">!=</span> <span class="s">""</span><span class="p">)</span>
+                <span class="p">{</span>
+                    <span class="kt">double</span> <span class="n">temp</span><span class="p">;</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="kt">double</span><span class="p">.</span><span class="nf">TryParse</span><span class="p">(</span><span class="n">txtE</span><span class="p">.</span><span class="n">Text</span><span class="p">,</span> <span class="k">out</span> <span class="n">temp</span><span class="p">))</span>
+                    <span class="p">{</span>
+                        <span class="n">SaveFileDialog</span> <span class="n">sfd</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">SaveFileDialog</span><span class="p">();</span>
+                        <span class="n">sfd</span><span class="p">.</span><span class="n">Filter</span> <span class="p">=</span> <span class="s">"Generate Files (*.gen)|*.gen|"</span> <span class="p">+</span> <span class="s">"All files (*.*)|*.*"</span><span class="p">;</span>
+                        <span class="n">sfd</span><span class="p">.</span><span class="n">InitialDirectory</span> <span class="p">=</span> <span class="n">Environment</span><span class="p">.</span><span class="nf">GetFolderPath</span><span class="p">(</span><span class="n">Environment</span><span class="p">.</span><span class="n">SpecialFolder</span><span class="p">.</span><span class="n">MyDocuments</span><span class="p">);</span>
+                        <span class="k">if</span> <span class="p">(</span><span class="n">sfd</span><span class="p">.</span><span class="nf">ShowDialog</span><span class="p">()</span> <span class="p">==</span> <span class="n">DialogResult</span><span class="p">.</span><span class="n">OK</span><span class="p">)</span>
+                        <span class="p">{</span>
+                            <span class="n">Compress</span> <span class="n">c</span> <span class="p">=</span> <span class="k">new</span> <span class="nf">Compress</span><span class="p">(</span><span class="n">txtFile</span><span class="p">.</span><span class="n">Text</span><span class="p">,</span> <span class="n">sfd</span><span class="p">.</span><span class="n">FileName</span><span class="p">,</span> <span class="n">temp</span><span class="p">);</span>
+                        <span class="p">}</span>
+                    <span class="p">}</span>
+                    <span class="k">else</span>
+                    <span class="p">{</span>
+                        <span class="n">MessageBox</span><span class="p">.</span><span class="nf">Show</span><span class="p">(</span><span class="s">"请输入数字！"</span><span class="p">);</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+                <span class="k">else</span>
+                <span class="p">{</span>
+                    <span class="n">MessageBox</span><span class="p">.</span><span class="nf">Show</span><span class="p">(</span><span class="s">"请输入数字！"</span><span class="p">);</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="k">else</span>
+            <span class="p">{</span>
+                <span class="n">MessageBox</span><span class="p">.</span><span class="nf">Show</span><span class="p">(</span><span class="s">"请选择文件！"</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+
+<p><strong>代码如果存在问题，请一定帮我指正!大神，谢谢了!</strong></p>
+
+    </article>
+    <div class="share">
+      <div class="share-component"></div>
+    </div>
+    <div class="comment">
+      
+	
+		<!-- Remarkbox - Your readers want to communicate with you -->
+		<div id="remarkbox-div">
+			<noscript>
+				<iframe id=remarkbox-iframe src="https://my.remarkbox.com/embed?nojs=true" style="height:600px;width:100%;border:none!important" tabindex=0></iframe>
+			</noscript>
+		</div>
+		<script src="https://my.remarkbox.com/static/js/iframe-resizer/iframeResizer.min.js"></script>
+		<script>
+			var rb_owner_key = "a7ec1d2e-c233-11e7-a40d-040140774501";
+			var thread_uri = window.location.href;
+			var thread_fragment = window.location.hash;
+			function create_remarkbox_iframe() {
+				var src = "https://my.remarkbox.com/embed?rb_owner_key=" + rb_owner_key + "&thread_uri=" + thread_uri;
+				var ifrm = document.createElement("iframe");
+				ifrm.setAttribute("id", "remarkbox-iframe");
+				ifrm.setAttribute("scrolling", "no");
+				ifrm.setAttribute("src", src);
+				ifrm.setAttribute("frameborder", "0");
+				ifrm.setAttribute("tabindex", "0");
+				ifrm.setAttribute("title", "Remarkbox");
+				ifrm.style.width = "100%";
+				document.getElementById("remarkbox-div").appendChild(ifrm);
+			}
+			create_remarkbox_iframe();
+			iFrameResize(
+				{
+					checkOrigin: ["https://my.remarkbox.com"],
+					inPageLinks: true,
+					initCallback: function(e) {e.iFrameResizer.moveToAnchor(thread_fragment)}
+				},
+				document.getElementById("remarkbox-iframe")
+			);
+		</script>
+		
+
+    </div>
+  </div>
+  <div class="column one-fourth">
+    
+<h3>Search</h3>
+<div id="site_search">
+    <input type="text" id="search_box" placeholder="Search">
+    <button class="btn btn-default" id="site_search_do"><span class="octicon octicon-search"></span></button>
+</div>
+
+<ul id="search_results"></ul>
+
+<link rel="stylesheet" type="text/css" href="http://localhost:4000/assets/css/modules/sidebar-search.css">
+<script src="http://localhost:4000/assets/js/lunr.min.js"></script>
+<script src="http://localhost:4000/assets/js/search.js"></script>
+
+
+    
+
+    
+<h3 class="post-directory-title mobile-hidden">Table of Contents</h3>
+<div id="post-directory-module" class="mobile-hidden">
+  <section class="post-directory">
+  <!-- Links that trigger the jumping -->
+  <!-- Added by javascript below -->
+  <dl></dl>
+  </section>
+</div>
+
+<script src="http://localhost:4000/assets/js/jquery.toc.js"></script>
+
+  </div>
+</div>
+</section>
+<!-- /section.content -->
+
+    <footer class="container">
+        <div class="site-footer" role="contentinfo">
+            <div class="copyright left mobile-block">
+                    © 2017
+                    <span title="Ziyang Sun">Ziyang Sun</span>
+                    <a href="javascript:window.scrollTo(0,0)" class="right mobile-visible">TOP</a>
+            </div>
+
+            <ul class="site-footer-links right mobile-hidden">
+                <li>
+                    <a href="javascript:window.scrollTo(0,0)" >TOP</a>
+                </li>
+            </ul>
+            <a href="http://github.com/zvonimirsun/zvonimirsun.github.io" target="_blank" aria-label="view source code">
+                <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
+            </a>
+            <ul class="site-footer-links mobile-hidden">
+                
+                <li>
+                    <a href="/" title="首页" target="">首页</a>
+                </li>
+                
+                <li>
+                    <a href="/categories/" title="分类" target="">分类</a>
+                </li>
+                
+                <li>
+                    <a href="/about/" title="关于" target="">关于</a>
+                </li>
+                
+                <li><a href="/feed.xml"><span class="octicon octicon-rss" style="color:orange;"></span></a></li>
+            </ul>
+
+        </div>
+    </footer>
+    <!-- / footer -->
+    <script src="http://localhost:4000/assets/vendor/share.js/dist/js/share.min.js"></script>
+    <script src="http://localhost:4000/assets/js/geopattern.js"></script>
+    <script src="http://localhost:4000/assets/js/prism.js"></script>
+    <link rel="stylesheet" href="http://localhost:4000/assets/css/globals/prism.css">
+    <script>
+      jQuery(document).ready(function($) {
+        // geopattern
+        $('.geopattern').each(function(){
+          $(this).geopattern($(this).data('pattern-id'));
+        });
+       // hljs.initHighlightingOnLoad();
+      });
+    </script>
+    
+    <div style="display:none">
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-105003596-1', 'auto');
+        ga('send', 'pageview');
+
+      </script>
+    </div>
+    
+</body>
+</html>
