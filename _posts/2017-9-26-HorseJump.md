@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 跳马算法
+title: GIS算法基础：跳马算法
 categories: 笔记
 description: 简单跳马算法学习
 keywords: 笔记, C#

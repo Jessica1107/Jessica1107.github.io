@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 最佳工作序列算法
+title: GIS算法基础：最佳工作序列算法
 categories: 笔记
 description: 最佳工作序列算法练习
 keywords: 笔记, C#，GIS算法
