@@ -71,8 +71,8 @@ repository: zvonimirsun/zvonimirsun.github.io
 # ---------------- #
 #      Comments    #
 # ---------------- #
-# support provider: remarkbox, gitment, gitalk, hypercomments
-comments_provider: remarkbox
+# support provider: remarkbox, gitment, gitalk, hypercomments, valine
+comments_provider: valine
 # !!!重要!!! 请修改下面这些信息为你自己申请的
 # !!!Important!!! Please modify infos below to yours
 # https://imsun.net/posts/gitment-introduction/
