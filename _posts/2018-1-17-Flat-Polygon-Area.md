@@ -1,7 +1,7 @@
 ---
 layout: post
-title: GIS算法基础：平面多边形面积计算
-categories: 笔记
+title: 平面多边形面积计算
+categories: GIS算法基础
 description: 平面多边形面积计算
 keywords: C#,GIS算法,平面多边形,面积
 ---

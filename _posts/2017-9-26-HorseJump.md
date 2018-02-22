@@ -1,9 +1,9 @@
 ---
 layout: post
-title: GIS算法基础：跳马算法
-categories: 笔记
+title: 跳马算法
+categories: GIS算法基础
 description: 简单跳马算法学习
-keywords: 笔记, C#
+keywords: C#, GIS算法
 ---
 
 有一 m * n 的棋盘(即棋盘由m行和n列)，一马放在棋盘中任意位置，马按中国象棋跳法，从初始位置起跳，跳至边界后返回，求所有能返回初始位置的周游路线。

@@ -1,9 +1,9 @@
 ---
 layout: post
 title: SQL Server数据库角色成员身份
-categories: 笔记
+categories: 数据库
 description: SQL Server数据库学习
-keywords: 笔记, ASP.NET, MVC
+keywords: 数据库角色, SQL Server
 ---
 
 本文总结了SQL Server数据库的自带角色成员身份权限。

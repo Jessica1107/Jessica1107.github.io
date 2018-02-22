@@ -1,9 +1,9 @@
 ---
 layout: post
 title: 0910 空间数据库课堂问题练习总结
-categories: 笔记
+categories: 数据库
 description: 空间数据库
-keywords: 笔记, 空间数据库
+keywords: 数据库, SQL
 ---
 
 课前老师出了一些题目来考察我们对上节课的掌握情况，我在此做一下总结，以备日后复习用。

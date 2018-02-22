@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Visual Studio快捷键
-categories: 笔记
+categories: Visual Studio
 description: Visual Studio快捷键
 keywords: VS, shortcuts, 快捷键
 ---

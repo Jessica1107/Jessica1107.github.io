@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Oracle PL/SQL BREAK-ON排列实例
-categories: 笔记
+categories: 数据库
 description: Oracle数据库学习
 keywords: 笔记, Oracle, break on, SQL*Plus
 ---
