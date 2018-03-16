@@ -20,13 +20,13 @@ Hello World.
 
 这个时候想到之前记录下来的一段歌词：
 
->Now that you know,
->this is my life,
->I won't be told what's supposed to be right,
->catch my breath,
->no one can hold me back,
->I ani't got time for that,
->won't let them get me down.
+>Now that you know,  
+>this is my life,  
+>I won't be told what's supposed to be right,  
+>catch my breath,  
+>no one can hold me back,  
+>I ani't got time for that,  
+>won't let them get me down.  
 
 嗯，this is my life.
 
