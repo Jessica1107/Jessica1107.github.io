@@ -8,7 +8,11 @@ menu: 关于
 permalink: /about/
 ---
 
-Do not part with your illusions. When they are gone you may still exist, but you have ceased to live. 
+Do not part with your illusions. 
+
+When they are gone you may still exist, 
+
+but you have ceased to live. 
 
 ## 联系
 
