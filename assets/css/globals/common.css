@@ -1,4 +1,4 @@
-.site-header,.site-header-actions .select-menu {
+﻿.site-header,.site-header-actions .select-menu {
     position: relative
 }
 
@@ -21,8 +21,8 @@
 }
 
 .pagination a.active {
-    background: #337ab7;
-    border-color: #337ab7;
+    background: rgb(36, 41, 46);
+    border-color: rgb(36, 41, 46);
     z-index: 2;
     color: #fff;
     cursor: default
