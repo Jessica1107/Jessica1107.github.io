@@ -1,25 +1,25 @@
 # ---------------- #
 #   Main Configs   #
 # ---------------- #
-baseurl: https://www.sunziyang.com
-url: https://www.sunziyang.com
+baseurl: https://Jessica1107.github.io
+url: https://Jessica1107.github.io
 date_format: "ordinal"
-title: 随遇而安
-subtitle: "在自由的空气中漂浮"
-description: "孙梓洋的个人博客"
-keywords: 孙梓洋, Ziyang Sun, ZvonimirSun, sunziyang
+title: Sakura
+subtitle: "Illusions"
+description: "Jessica's Blog"
+keywords: Jessica,1107
 favicon: /favicon.ico
-timezone: Asia/Shanghai
+timezone: Asia/Beijing
 encoding: "utf-8"
 side_bar_repo_limit: 4
 
 # ---------------- #
 #      Author      #
 # ---------------- #
-author: Ziyang Sun
-github_username: ZvonimirSun
-location: Sunzhou, China
-email: i@sunziyang.com
+author: Jessica
+github_username: Jessica1107
+location: Wuxi, China
+email: lujiaying11@126.com
 
 # ---------------- #
 #    Navigation    #
@@ -64,7 +64,7 @@ plugins:
     - jemoji
 #     - jekyll-mentions
 
-repository: zvonimirsun/zvonimirsun.github.io
+repository: Jessica1107/Jessica1107.github.io
 
 #github: f13721243e5a4baef76595f0fe3fb65f993272
 
@@ -73,24 +73,9 @@ repository: zvonimirsun/zvonimirsun.github.io
 # ---------------- #
 # support provider: remarkbox, gitment, gitalk, hypercomments, valine
 comments_provider: valine
-# !!!重要!!! 请修改下面这些信息为你自己申请的
-# !!!Important!!! Please modify infos below to yours
-# https://imsun.net/posts/gitment-introduction/
-gitment:
-    owner: ZvonimirSun
-    repo: zvonimirsun.github.io
-    oauth:
-        client_id: bdbc5c2d530ca59fd12a
-        client_secret: 845c90824be260199ec0d72b67bafd00cb8c81ac
-# https://github.com/gitalk/gitalk#install
-gitalk:
-    owner: ZvonimirSun
-    repo: zvonimirsun.github.io
-    clientID: c3c061b234c660a1eb1d
-    clientSecret: a0f105e00662d01970e679316269aae332016788
 
 # ---------------- #
 #    Analytics     #
 # ---------------- #
 google:
-    analytics_id: UA-105003596-1
+    analytics_id: 
