@@ -1,7 +1,7 @@
-# ---------------- #
+﻿# ---------------- #
 #   Main Configs   #
 # ---------------- #
-baseurl: https://Jessica1107.github.io
+baseurl: 
 url: https://Jessica1107.github.io
 date_format: "ordinal"
 title: Jessica
